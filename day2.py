@@ -24,7 +24,7 @@ with open("day2-input.txt") as file:
              'letter' : row['letter'][0],
              'passw' : row['passw']} for row in reader]
 
-# Check part 1, return True of False and use sum() to count
+# Check part 1, return True or False and use sum() to count
 p1 = sum([check_policy_p1(row['num'], row['letter'], row['passw']) for row in data])
 
 # Check part 2, return True or False and use sum() to count.
