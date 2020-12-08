@@ -15,7 +15,7 @@ def jmp(arg: str, current_op: int, accumulator: int) -> (int, int):
     current_op += int(arg)
     return current_op, accumulator
 
-def part_1(instructions: list[str, str]) -> (bool, int):
+def part_1(instructions: list[list[str]]) -> (bool, int):
     """ Process the list of instructions, ensuring no repetition.
     Return the accumulator and True or False.
     True if the list of instructions is reached, if not return False.
@@ -39,7 +39,7 @@ def part_1(instructions: list[str, str]) -> (bool, int):
         # If the end of the loop is reached naturally, return True. Used in p2
         return True, accumulator
 
-def part_2(instructions: list[str, str]) -> int:
+def part_2(instructions: list[list[str]]) -> int:
     """ Try changing each nop to jmp or jmp to nop one by one.
     Run these new instructions through part_1 to determine if the end
     of the instructions can be reached. Once they can, return accumulator.
